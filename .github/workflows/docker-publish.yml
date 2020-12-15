@@ -2,9 +2,10 @@ name: Docker Publish
 
 on:  
   workflow_dispatch:
-  schedule:
+  push:
+  #schedule:
     # * is a special character in YAML so you have to quote this string
-    - cron:  '0 12 * * *'
+    #- cron:  '0 12 * * *'
 
 env:
   DOCKER_IMAGE: ghcr.io/${{ github.repository }}
