@@ -22,6 +22,8 @@ RUN conda install -c conda-forge mlflow mlflow-ui-dbg -y
 #  -y
 
 RUN pip install \
+  # https://pypi.org/project/boto3/
+  boto3 \
   # https://docs.sqlalchemy.org/en/14/core/engines.html#postgresql
   psycopg2-binary pg8000 \
   # https://docs.sqlalchemy.org/en/14/core/engines.html#mysql
